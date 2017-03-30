@@ -23,6 +23,6 @@ a message will be shown if there are no fatal accidents within the specified sta
 for the specified year.
 }
 \examples{
-fars_map_state("1","2013")
+\dontrun{fars_map_state("1","2013")}
 
 }

@@ -13,7 +13,7 @@
 #' @importFrom dplyr tbl_df
 #'
 #' @examples
-#' fars_data_table <- fars_read("data/accident_2013.csv.bz2")
+#' \dontrun{fars_data_table <- fars_read("data/accident_2013.csv.bz2")}
 #'
 #' @export
 fars_read <- function(filename) {
@@ -38,7 +38,7 @@ fars_read <- function(filename) {
 #' @return This function returns a character string containing the desired filename.
 #'
 #' @examples
-#' file2013 <- make_filename("2013")
+#' \dontrun{file2013 <- make_filename("2013")}
 #'
 #'@export
 make_filename <- function(year) {
@@ -61,10 +61,11 @@ make_filename <- function(year) {
 #' @importFrom dplyr mutate select %>%
 #'
 #' @examples
-#' accidentData <- fars_read_years(c("2013","2015"))
+#' \dontrun{accidentData <- fars_read_years(c("2013","2015"))}
 #'
 #'@export
 fars_read_years <- function(years) {
+        MONTH <- NULL # set vars to NULL to appease R CMD check
         lapply(years, function(year) {
                 file <- make_filename(year)
                 tryCatch({
@@ -94,10 +95,11 @@ fars_read_years <- function(years) {
 #' @importFrom tidyr spread
 #'
 #' @examples
-#' accidentSummary <- fars_summarize_years(c("2014","2015"))
+#' \dontrun{accidentSummary <- fars_summarize_years(c("2014","2015"))}
 #'
 #' @export
 fars_summarize_years <- function(years) {
+        MONTH <- n <- year <- NULL # set vars to NULL to appease R CMD check
         dat_list <- fars_read_years(years)
         dplyr::bind_rows(dat_list) %>%
                 dplyr::group_by(year, MONTH) %>%
@@ -124,10 +126,11 @@ fars_summarize_years <- function(years) {
 #' @importFrom graphics points
 #'
 #' @examples
-#' fars_map_state("1","2013")
+#' \dontrun{fars_map_state("1","2013")}
 #'
 #' @export
 fars_map_state <- function(state.num, year) {
+        MONTH <- STATE <- n <- year <- NULL # set vars to NULL to appease R CMD check
         filename <- make_filename(year)
         data <- fars_read(filename)
         state.num <- as.integer(state.num)

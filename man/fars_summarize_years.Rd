@@ -20,6 +20,6 @@ summarizes the accident data by month and by year.  The function has no error co
 but an invalid year request will cause a warning to be issued by the fars_read_years function.
 }
 \examples{
-accidentSummary <- fars_summarize_years(c("2014","2015"))
+\dontrun{accidentSummary <- fars_summarize_years(c("2014","2015"))}
 
 }

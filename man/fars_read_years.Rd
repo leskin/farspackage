@@ -20,6 +20,6 @@ The results are returned in a list.  If data for a requested year is not availab
 a warning is produced and nothing is returned for the given year.
 }
 \examples{
-accidentData <- fars_read_years(c("2013","2015"))
+\dontrun{accidentData <- fars_read_years(c("2013","2015"))}
 
 }

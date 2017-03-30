@@ -18,6 +18,6 @@ using the read_csv function in the readr package. The function stops if the data
 does not exist.
 }
 \examples{
-fars_data_table <- fars_read("data/accident_2013.csv.bz2")
+\dontrun{fars_data_table <- fars_read("data/accident_2013.csv.bz2")}
 
 }

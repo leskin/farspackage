@@ -20,6 +20,6 @@ the form: "accident_year.csv.bz2" where "year" is replaced with the desired year
 conditions that will cause an error.
 }
 \examples{
-file2013 <- make_filename("2013")
+\dontrun{file2013 <- make_filename("2013")}
 
 }
