@@ -1,5 +1,5 @@
 # farspackage
-R Package (Week 4 Assignment) for Building R Packages on Coursera
+Week 4 Assignment (R package) for "Building R Packages" course on Coursera
 
 Travis badge:
 
