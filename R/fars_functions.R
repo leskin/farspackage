@@ -130,7 +130,7 @@ fars_summarize_years <- function(years) {
 #'
 #' @export
 fars_map_state <- function(state.num, year) {
-        MONTH <- STATE <- n <- year <- NULL # set vars to NULL to appease R CMD check
+        MONTH <- STATE <- n <- NULL # set vars to NULL to appease R CMD check
         filename <- make_filename(year)
         data <- fars_read(filename)
         state.num <- as.integer(state.num)
